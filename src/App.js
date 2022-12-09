@@ -63,7 +63,7 @@ const initialState = {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://sleepy-inlet-95499.herokuapp.com/imageurl', {
+      fetch('https://face-recognition-backend-2w0l.onrender.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -73,7 +73,7 @@ const initialState = {
       .then(response => response.json())
       .then(response => {
          if (response) {
-          fetch('https://sleepy-inlet-95499.herokuapp.com/image', {
+          fetch('https://face-recognition-backend-2w0l.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
